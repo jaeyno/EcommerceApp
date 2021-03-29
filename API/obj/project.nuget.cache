@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "MVvozN3beQiqhnfh2n/enKQBgIPOUCKPTRN9m+3UmHOXL6LtHZb3PzEplz3Fj7ZT4RX30l6js+4GRbd0Qn8eqg==",
+  "dgSpecHash": "+M3XfsjR8TYrhYATSxawjglnLnTI57+5FseanAsA8Z4NZL+vplWik8hXpehW5mr6zMKN6pWhGthhUEZB2C7vcg==",
   "success": true,
   "projectFilePath": "/Users/jaeno/Desktop/EcommerceApp/API/API.csproj",
   "expectedPackageFiles": [
+    "/Users/jaeno/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/jaeno/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/microsoft.data.sqlite.core/5.0.4/microsoft.data.sqlite.core.5.0.4.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/microsoft.dotnet.platformabstractions/3.1.6/microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/microsoft.entityframeworkcore/5.0.4/microsoft.entityframeworkcore.5.0.4.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/microsoft.entityframeworkcore.abstractions/5.0.4/microsoft.entityframeworkcore.abstractions.5.0.4.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/microsoft.entityframeworkcore.analyzers/5.0.4/microsoft.entityframeworkcore.analyzers.5.0.4.nupkg.sha512",
+    "/Users/jaeno/.nuget/packages/microsoft.entityframeworkcore.design/5.0.4/microsoft.entityframeworkcore.design.5.0.4.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/microsoft.entityframeworkcore.relational/5.0.4/microsoft.entityframeworkcore.relational.5.0.4.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/microsoft.entityframeworkcore.sqlite/5.0.4/microsoft.entityframeworkcore.sqlite.5.0.4.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/5.0.4/microsoft.entityframeworkcore.sqlite.core.5.0.4.nupkg.sha512",
