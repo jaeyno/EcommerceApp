@@ -1,3 +1,4 @@
+import { ShopParams } from './../models/shopParams';
 import { IBrand } from './../models/brand';
 import { IPagination } from './../models/pagination';
 import { HttpClient, HttpParams } from '@angular/common/http';
@@ -14,21 +15,21 @@ export class ShopService {
 
   constructor(private http: HttpClient) { }
 
-  getProduct(brandId?: number, typeId?: number, sort?: string) {
+  getProduct(shopParams: ShopParams) {
     
     let params = new HttpParams();
 
-    if (brandId) {
-      params = params.append('brandId', brandId.toString());
+    if (shopParams.brandId !== 0) {
+      params = params.append('brandId', shopParams.brandId.toString());
     }
 
-    if (typeId) {
-      params = params.append('typeId', typeId.toString());
+    if (shopParams.typeId !== 0) {
+      params = params.append('typeId', shopParams.typeId.toString());
     }
 
-    if (sort) {
-      params = params.append('sort', sort);
-    }
+    params = params.append('sort', shopParams.sort);
+    params = params.append('pageIndex', shopParams.pageNumber.toString());
+    params = params.append('pageIndex', shopParams.pageSize.toString());
 
     return this.http.get<IPagination>(this.baseUrl + 'products', {observe: 'response', params})
       .pipe(
