@@ -1,3 +1,4 @@
+import { IProduct } from './../models/product';
 import { ShopParams } from './../models/shopParams';
 import { IBrand } from './../models/brand';
 import { IPagination } from './../models/pagination';
@@ -15,7 +16,7 @@ export class ShopService {
 
   constructor(private http: HttpClient) { }
 
-  getProduct(shopParams: ShopParams) {
+  getProducts(shopParams: ShopParams) {
     
     let params = new HttpParams();
 
@@ -41,6 +42,10 @@ export class ShopService {
           return response.body;
         })
       );
+  }
+
+  getProduct(id: number) {
+    return this.http.get<IProduct>(this.baseUrl + 'products/' + id)
   }
 
   getBrands() {
