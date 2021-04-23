@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { Browser } from 'selenium-webdriver';
+import { TextInputComponent } from './components/text-input/text-input.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { Browser } from 'selenium-webdriver';
     PagingHeaderComponent,
     PagerComponent,
     OrderTotalsComponent,
+    TextInputComponent,
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,8 @@ import { Browser } from 'selenium-webdriver';
     CarouselModule,
     OrderTotalsComponent,
     ReactiveFormsModule,
-    BsDropdownModule
+    BsDropdownModule,
+    TextInputComponent
   ]
 })
 export class SharedModule { }
