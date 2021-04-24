@@ -22,6 +22,8 @@ namespace API.Extensions
 
             services.AddScoped<IOrderService, OrderService>();
 
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             services.Configure<ApiBehaviorOptions>(options => {
                 options.InvalidModelStateResponseFactory = actionContext => 
                 {
