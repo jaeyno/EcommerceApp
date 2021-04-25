@@ -1,4 +1,4 @@
-<div class="mt-4" [formGroup]="checkoutForm">
+<div class="mt-4 container" [formGroup]="checkoutForm">
     <div class="row" formGroupName="deliveryForm">
         <div class="col-6 form-group" *ngFor="let method of deliveryMethods">
             <input type="radio" id={{method.id}} value={{method.id}} formControlName="deliveryMethod" class="custom-control-input">
@@ -9,4 +9,13 @@
             </label>
         </div>
     </div>
+</div>
+
+<div class="float-none d-flex justify-content-between flex-column flex-lg-row mb-4">
+    <button class="btn btn-outline-primary" cdkStepperPrevious>
+        <i class="fa fa-angle-left"></i> Back to Address
+    </button>
+    <button class="btn btn-primary" cdkStepperNext>
+        Go to Review <i class="fa fa-angle-right"></i>
+    </button>
 </div>
