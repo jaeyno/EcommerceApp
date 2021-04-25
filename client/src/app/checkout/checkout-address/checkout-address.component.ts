@@ -1,3 +1,5 @@
+import { ToastrService } from 'ngx-toastr';
+import { AccountService } from './../../account/account.service';
 import { FormGroup } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -10,9 +12,19 @@ export class CheckoutAddressComponent implements OnInit {
 
   @Input() checkoutForm: FormGroup;
 
-  constructor() { }
+  constructor(private accountService: AccountService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
+  }
+
+  saveUserAddress() {
+    this.accountService.updateUserAddress(this.checkoutForm.get('addressForm').value)
+      .subscribe(() => {
+        this.toastr.success('Address saved');
+      }, error => {
+        this.toastr.error(error.message);
+        console.log(error);
+      })
   }
 
 }
