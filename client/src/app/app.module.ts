@@ -16,7 +16,6 @@ import { OrdersComponent } from './orders/orders.component';
 @NgModule({
   declarations: [
     AppComponent,
-    OrdersComponent,
   ],
   imports: [
     BrowserModule,
