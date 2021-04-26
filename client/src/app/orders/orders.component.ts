@@ -1,4 +1,6 @@
+import { OrdersService } from './orders.service';
 import { Component, OnInit } from '@angular/core';
+import { IOrder } from '../models/order';
 
 @Component({
   selector: 'app-orders',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersComponent implements OnInit {
 
-  constructor() { }
+  orders: IOrder[];
+
+  constructor(private orderService: OrdersService) { }
 
   ngOnInit(): void {
+    this.getOrders();
+  }
+
+  getOrders() {
+    this.orderService.getOrdersForUser().subscribe((orders: IOrder[]) => {
+      this.orders = orders;
+    }, error => {
+      console.log(error);
+    })
   }
 
 }
