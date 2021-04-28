@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ug83NbMAvaid+ngGHKh8gVoGMoZTJVUFae90zy2Yq6ZW03yIvP9cgaKDAsYDk3M2hjvId7L7HgZ/6o/bNrmUhg==",
+  "dgSpecHash": "c2JwqTGIgk86rI1rdcd+RG+mYNXgjFMY3uv0PB0vmXlLKN0pcuwrv5Y0VsNijjs+ZBXPSW+4tC3AbCVpXW4NmQ==",
   "success": true,
   "projectFilePath": "/Users/jaeno/Desktop/EcommerceApp/API/API.csproj",
   "expectedPackageFiles": [
@@ -63,12 +63,14 @@
     "/Users/jaeno/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/microsoft.win32.systemevents/5.0.0/microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "/Users/jaeno/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/pipelines.sockets.unofficial/2.2.0/pipelines.sockets.unofficial.2.2.0.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.0.4/sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.0.4/sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/sqlitepclraw.provider.dynamic_cdecl/2.0.4/sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/stackexchange.redis/2.2.4/stackexchange.redis.2.2.4.nupkg.sha512",
+    "/Users/jaeno/.nuget/packages/stripe.net/39.45.0/stripe.net.39.45.0.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "/Users/jaeno/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
