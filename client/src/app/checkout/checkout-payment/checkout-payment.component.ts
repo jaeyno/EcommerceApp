@@ -1,24 +1,52 @@
+import { element } from 'protractor';
 import { Router, NavigationExtras } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CheckoutService } from './../checkout.service';
 import { BasketService } from './../../basket/basket.service';
 import { FormGroup } from '@angular/forms';
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { IBasket } from 'src/app/models/basket';
 import { IOrder } from 'src/app/models/order';
+
+declare var Stripe;
 
 @Component({
   selector: 'app-checkout-payment',
   templateUrl: './checkout-payment.component.html',
   styleUrls: ['./checkout-payment.component.scss']
 })
-export class CheckoutPaymentComponent implements OnInit {
+export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
 
   @Input() checkoutForm: FormGroup;
+  @ViewChild('cardNumber', {static: true}) cardNumberElement: ElementRef;
+  @ViewChild('cardExpiry', {static: true}) cardExpiryElement: ElementRef;
+  @ViewChild('cardCvc', {static: true}) cardCvcElement: ElementRef;
+  stripe: any;
+  cardNumber: any;
+  cardExpiry: any;
+  cardCvc: any;
+  cardErrors: any;
 
   constructor(private basketService: BasketService, private checkoutService: CheckoutService, private toastr: ToastrService, private router: Router) { }
+  
+  ngAfterViewInit(): void {
+    this.stripe = Stripe('pk_test_51Il1uqFODHmPEbz68RK03d66cPkIVvcMa9RAXKuTICjPx53XAcAY1FkcxeoEnXjl3MH3oW0S9EKvIyCOygU0oZa000FtPdLUm2');
+    const elements = this.stripe.elements();
 
-  ngOnInit(): void {
+    this.cardNumber = elements.create('cardNumber');
+    this.cardNumber.mount(this.cardNumberElement.nativeElement);
+
+    this.cardExpiry = elements.create('cardExpiry');
+    this.cardExpiry.mount(this.cardExpiryElement.nativeElement);
+
+    this.cardCvc = elements.create('cardCvc');
+    this.cardCvc.mount(this.cardCvcElement.nativeElement);
+  }
+
+  ngOnDestroy(): void {
+    this.cardNumber.destroy();
+    this.cardExpiry.destroy();
+    this.cardCvc.destroy();
   }
 
   submitOrder() {
