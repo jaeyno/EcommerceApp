@@ -7,13 +7,14 @@ import { Injectable } from '@angular/core';
 import { IType } from '../models/productType';
 import { map } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShopService {
   
-  baseUrl = 'https://localhost:5001/api/';
+  baseUrl = environment.apiUrl;
   products: IProduct[] = [];
   brands: IBrand[] = [];
   types: IType[] = [];
